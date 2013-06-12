@@ -1,0 +1,81 @@
+Business Cards Use Cases:
+
+
+Use Case: 
+
+Login use case:
+	Primary flow of events:
+		0. Anonymous user navigates to page
+		1. Redirected login/registration page
+		2. User may login or register
+		3. If user elects to login, user is sent to login page and inputs username, password, and then selects they agree with TOS
+		4. If password is accepted, user is sent to dashboard. 
+		END.
+
+Registration use case:
+	Primary flow of events:
+		0. Anonymous has no account.
+		1. User may select "Registration"
+		2. User is sent a registration page, where they input their information. 
+		3. User inputs all information.
+		4. User checks "Agree with TOS"
+		5. System checks if user info is duplicate. If not, new account is created and User is logged in with new account.
+	Alternate flow of events:
+		Continue from 5:
+		6. User info is duplicate. User is prompted to change incorrect field (username, typically).
+		7. System rechecks. If still bad, go to 6. If not, log in user.
+		END. 
+
+Business card purchase use case: 
+	Primary flow of events:
+		0. Logged-in user selects "Buy business card"
+		1. User is presented with a business card purchase page. User inputs information, although much of it is auto-filled from profile. User may change this info.
+		2. User selects quantity of business cards
+		3. User selects "Make order"
+		4. System takes order and makes a new order in the orders table.
+		5. Order entry references "Inventory" table.
+		6. Order is "Pending" until payment is confirmed. 
+		7. Order is "Confirmed" when payment is confirmed, and sent to printing department.
+	Alternate flow of events: 
+		8. Order is cancelled. 
+		9. Order status changed to cancelled in orders database.
+		END.
+
+TABLES NEEDED:
+
+Users table:
+
+	Firstname 
+	Lastname
+	Affiliate_ID (Primary key)
+	Username
+	Password
+	Address
+	EIN
+	Sponsor_ID
+	Email
+	PhoneNum
+	Created_At
+	LastVisit_At
+	Status
+
+Inventory table:
+	
+	Item_ID (Primary Key)
+	Item_Cost
+	btg180_pts
+	shipping_rule
+
+Orders table:
+	
+	Created_Date
+	Completed_date
+	Order_status
+	Affiliate_ID
+	Sponsor_ID
+	Order_Value
+	Order_Quantity
+	Tax_Value
+	Tracking_Num
+	Payment_type
+	Order_ID (Primary Key)
