@@ -45,9 +45,9 @@ TABLES NEEDED:
 
 Users table:
 
+	Affiliate_ID (Primary key)
 	Firstname 
 	Lastname
-	Affiliate_ID (Primary key)
 	Username
 	Password
 	Address
