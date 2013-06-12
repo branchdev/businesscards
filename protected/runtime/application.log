@@ -308,3 +308,233 @@ Stack trace:
 #12 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once('/Applications/M...')
 #13 {main}
 ---
+2013/06/12 01:21:11 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_users' (
+	"affiliate_id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"fname" varchar(255) NOT NULL
+) ENGINE=InnoDB
+2013/06/12 01:21:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"affiliate_id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"fname" varchar(255) NOT NULL
+) ENGINE=InnoDB.
+2013/06/12 01:21:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_users' (
+	"affiliate_id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"fname" varchar(255) NOT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/businesscards/protected/migrations/m130612_073231_create_user_table.php(11): CDbMigration->createTable('tbl_users', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---
+2013/06/12 01:22:21 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB
+2013/06/12 01:22:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2013/06/12 01:22:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/businesscards/protected/migrations/m130612_073231_create_user_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---
+2013/06/12 01:24:06 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Los_Angeles' for 'PDT/-7.0/DST' instead (/Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Applications/MAMP/htdocs/businesscards/businesscards/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/businesscards/businesscards/index.php(13): CWebApplication->run()
+#19 /Applications/MAMP/htdocs/yii/framework/cli/commands/ShellCommand.php(78): require()
+#20 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): ShellCommand->run()
+#21 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#22 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#23 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CConsoleApplication->run()
+#24 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once()
+#25 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once()
+REQUEST_URI=/index.php
+2013/06/12 01:24:06 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Los_Angeles' for 'PDT/-7.0/DST' instead (/Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Applications/MAMP/htdocs/businesscards/businesscards/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/businesscards/businesscards/index.php(13): CWebApplication->run()
+#19 /Applications/MAMP/htdocs/yii/framework/cli/commands/ShellCommand.php(78): require()
+#20 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): ShellCommand->run()
+#21 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#22 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#23 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CConsoleApplication->run()
+#24 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once()
+#25 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once()
+REQUEST_URI=/index.php
+2013/06/12 01:26:58 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Los_Angeles' for 'PDT/-7.0/DST' instead (/Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Applications/MAMP/htdocs/businesscards/businesscards/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/businesscards/businesscards/index.php(13): CWebApplication->run()
+#19 /Applications/MAMP/htdocs/yii/framework/cli/commands/ShellCommand.php(78): require()
+#20 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): ShellCommand->run()
+#21 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#22 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#23 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CConsoleApplication->run()
+#24 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once()
+#25 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once()
+REQUEST_URI=/index.php
+2013/06/12 01:26:58 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Los_Angeles' for 'PDT/-7.0/DST' instead (/Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /Applications/MAMP/htdocs/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /Applications/MAMP/htdocs/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /Applications/MAMP/htdocs/businesscards/businesscards/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(126): require()
+#8 /Applications/MAMP/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Applications/MAMP/htdocs/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /Applications/MAMP/htdocs/businesscards/businesscards/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /Applications/MAMP/htdocs/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Applications/MAMP/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /Applications/MAMP/htdocs/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /Applications/MAMP/htdocs/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /Applications/MAMP/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/businesscards/businesscards/index.php(13): CWebApplication->run()
+#19 /Applications/MAMP/htdocs/yii/framework/cli/commands/ShellCommand.php(78): require()
+#20 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): ShellCommand->run()
+#21 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#22 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#23 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CConsoleApplication->run()
+#24 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once()
+#25 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once()
+REQUEST_URI=/index.php
+2013/06/12 13:22:21 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB
+2013/06/12 13:22:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2013/06/12 13:22:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENGINE=InnoDB' in /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#2 /Applications/MAMP/htdocs/businesscards/businesscards/protected/migrations/m130612_073231_create_user_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#3 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(385): m130612_073231_create_user_table->up()
+#4 /Applications/MAMP/htdocs/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m130612_073231_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/MAMP/htdocs/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /Applications/MAMP/htdocs/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /Applications/MAMP/htdocs/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii/framework/yiic.php(33): CApplication->run()
+#11 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic.php(7): require_once('/Applications/M...')
+#12 /Applications/MAMP/htdocs/businesscards/businesscards/protected/yiic(4): require_once('/Applications/M...')
+#13 {main}
+---

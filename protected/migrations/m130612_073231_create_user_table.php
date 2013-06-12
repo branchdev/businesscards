@@ -2,30 +2,33 @@
 
 class m130612_073231_create_user_table extends CDbMigration
 {
-	public function up()
-	{
-		$this->createTable('tbl_users', array(
-			'affiliate_id'=>'pk',
-			'fname'=>'string NOT NULL',
-			'lname'=>'string NOT NULL',
-			'username'=>'string NOT NULL',
-			'password'=>'string NOT NULL',
-			'address'=>'string NOT NULL',
-			'ein'=>'string',
-			'sponsor_id'=>'string default NULL',
-			'email'=>'string NOT NULL',
-			'phone'=>'string NOT NULL',
-			'created'=>'DATETIME default NULL',
-			'lastvisit'=>'DATETIME default NULL',
-			'status'=>'string NOT NULL',
-			));
-	}
-
-	public function down()
-	{
-		$this->dropTable('tbl_users');
-		
-	}
+	 public function up()
+    {
+      $this->createTable('tbl_users', array(
+         'UserID'=>'pk',
+         'UserEmail'=>'string NOT NULL',
+         'UserFname'=>'string NOT NULL',
+         'UserLname'=>'string NOT NULL',
+         'UserAffiliateUsername'=>'string NOT NULL',
+         'UserPassword'=>'string NOT NULL',
+         'UserSponsorId'=>'string default NULL',
+         'UserCountry'=>'string NOT NULL',
+         'UserAddress'=>'string NOT NULL',
+         'UserCity'=>'string NOT NULL',
+         'UserState'=>'string NOT NULL',
+         'UsertZip'=> 'string NOT NULL',
+         'UserPhone'=>'string NOT NULL',
+         'UserEIN'=>'string default NULL',
+         'UserCreated'=>'DATETIME default NULL',
+         'UserLastvisit'=>'DATETIME default NULL',
+         'UserStatus'=>'string NOT NULL',
+       ), 'ENGINE=InnoDB'); 
+    
+ }
+   public function down()
+   {
+     $this->dropTable('tbl_users');
+   }
 
 	/*
 	// Use safeUp/safeDown to do migration with transaction
